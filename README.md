@@ -1,4 +1,4 @@
-# BIO-CE-GN Network Study
+# Exploring Biological Networks: Centrality and Clustering Analysis on the BIO-CE-GN Dataset
 **Learning from Networks Project**
 
 This project was developed as part of the course *“Learning from Networks”* for the Master’s Degree in Computer Engineering.  
