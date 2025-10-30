@@ -1,0 +1,71 @@
+\documentclass{article}
+
+% Language setting
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+% \usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue,breaklinks=true,unicode=true]{hyperref}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{etoolbox}
+\usepackage{multirow}
+
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{bibliography.bib} %Import the bibliography file
+
+% subsection 4
+
+\usepackage{amssymb,amsmath}
+% \usepackage[mathletters]{ucs}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setcounter{secnumdepth}{0}
+
+% use multiple pics
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+
+%referencing between files
+\usepackage{zref}
+% ------------------------------------------------------
+% DIMENSIONS OF THE PAGES
+% ------------------------------------------------------
+\geometry{
+ a4paper,
+ total={190mm,257mm},
+ left = 30mm,
+ right = 30mm,
+ top = 25mm,
+ bottom = 25mm
+}
+
+
+
+\begin{document}
+\input{titlepage.tex}
+\begin{abstract}
+
+\end{abstract}
+\tableofcontents
+\newpage
+% ------------------------------------------------------
+% NO IDENTATION
+% ------------------------------------------------------
+\setlength{\parindent}{0pt}
+
+% ------------------------------------------------------
+% CHAPTERS
+% ------------------------------------------------------
+
+\setcounter{page}{1}
+\input{chapters/Introduction}
+
+\end{document}
