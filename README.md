@@ -38,7 +38,7 @@ Specifically, we aim to:
 1. Compute **basic graph properties** (size, degree distribution, connectivity, density)  
 2. Calculate **centrality measures** (degree, closeness, betweenness)  
 3. Analyse **clustering coefficient** and **community structure**  
-4. Optionally, explore **motifs** and **biological relevance** of network patterns  
+4. Optionally, explore **motifs** and **biological relevance** of network patterns  ??
 
 ---
 
@@ -65,3 +65,6 @@ To reproduce the results, follow these steps:
 3. **Install dependencies:**  
    ```bash
    pip install -r requirements.txt
+
+
+## **Results**
