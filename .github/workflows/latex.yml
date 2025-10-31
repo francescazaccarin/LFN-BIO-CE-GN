@@ -1,0 +1,31 @@
+name: Build LaTeX report
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) prendi i file dal repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2) compila il LaTeX
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          # QUI metti il TUO file principale
+          root_file: final-report/source/main.tex
+          # se userai più passate/biblatex, lui le fa da solo
+
+      # 3) salva il PDF come "artifact" per scaricarlo
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-report
+          path: final-report/source/main.pdf
