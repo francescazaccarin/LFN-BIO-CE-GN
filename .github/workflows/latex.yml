@@ -14,5 +14,10 @@ jobs:
       - uses: xu-cheng/latex-action@v3
         with:
           root_file: final-report/source/main.tex
-          work_in_root_file_dir: true     # 👈 QUESTA È LA CHIAVE
-          #latexmk_use_biber: false        # per ora non stai usando la biblio
+          work_in_root_file_dir: true   # 👈 resta così
+
+      - name: Upload PDF                 # 👈 AGGIUNGI QUESTO BLOCCO
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-report-pdf         # nome dell’artifact (come si chiamerà il file)
+          path: final-report/source/main.pdf   # percorso del tuo PDF
