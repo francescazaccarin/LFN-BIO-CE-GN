@@ -14,5 +14,66 @@ The BIO-CE-GN dataset, representing genetic interactions in \textit{Caenorhabdit
 Through a combination of centrality and clustering analyses, this project aims to characterise the topology of the network and answer these fundamental questions about its organisation and functional architecture.
 
 \subsection{Objectives}
+The main objective of this project is to analyse the structure of the BIO-CE-GN gene interaction network by applying several graph-theoretical measures. 
+Specifically, we aim to:
+\begin{itemize}
+    \item Identify central genes using centrality metrics such as \textbf{degree}, \textbf{betweenness}, and \textbf{PageRank};
+    \item Evaluate the \textbf{clustering} and \textbf{community structure} to detect functional gene modules;
+    \item Compare different centrality measures to assess their biological interpretability and computational scalability.
+\end{itemize}
 
 \subsection{Dataset Overview}
+The \textbf{BIO-CE-GN dataset} consists of experimentally derived genetic interactions among genes of \textit{Caenorhabditis elegans}, a well-studied model organism. 
+Each node represents a gene, and each edge denotes an experimentally verified genetic interaction. 
+The dataset provides both directional and weighted information, indicating the type and strength of interactions.  
+
+The network contains approximately \textit{N} nodes and \textit{M} edges (exact values to be confirmed), forming a dense and biologically meaningful structure. 
+This dataset enables the exploration of complex topological properties that may correspond to real biological pathways and regulatory mechanisms.
+
+\section{Methodology}
+
+\subsection{Problem Definition}
+
+The primary goal is to characterise the connectivity and community structure of the gene interaction network derived from \textit{C. elegans}. 
+We aim to identify critical genes (hubs or regulators), analyse modularity, and study how topological patterns relate to biological functionality.
+
+\subsection{Data Preprocessing}
+
+Before performing any analysis, we cleaned and formatted the dataset to ensure compatibility with network analysis libraries. 
+This involved:
+\begin{itemize}
+    \item Removing self-loops and duplicated edges;
+    \item Handling missing or inconsistent identifiers;
+    \item Converting the data into an \textbf{edge list} format suitable for the \texttt{networkx} Python library.
+\end{itemize}
+
+\subsection{Graph Representation}
+
+The dataset was represented as an undirected graph \( G = (V, E) \), where:
+\begin{itemize}
+    \item \( V \) represents the set of genes;
+    \item \( E \) represents the genetic interactions between them.
+\end{itemize}
+
+The graph was constructed using the \texttt{networkx} library, which provides efficient tools for computing network metrics such as centrality, clustering coefficients, and community structures.
+
+\subsection{Algorithms Used}
+
+We computed several network metrics to analyse different aspects of the network:
+\begin{itemize}
+    \item \textbf{Degree Centrality:} Measures the number of connections each gene has, identifying highly connected hub genes.
+    \item \textbf{Betweenness Centrality:} Quantifies how often a gene lies on the shortest paths between other genes, identifying key regulatory genes.
+    \item \textbf{PageRank:} Evaluates the relative importance of genes based on their connectivity to other important genes.
+    \item \textbf{Clustering Coefficient:} Determines the tendency of genes to form tightly connected groups, representing potential biological modules.
+    \item \textbf{Average Neighbor Degree:} Indicates how the connectivity of a gene correlates with that of its neighbours.
+\end{itemize}
+
+\subsection{Intended Experiments}
+
+We plan to:
+\begin{itemize}
+    \item Analyse correlations between different centrality measures;
+    \item Visualise the network to highlight highly central genes;
+    \item Investigate whether topologically clustered genes correspond to known biological pathways;
+    \item Explore scalability of algorithms when applied to large-scale biological datasets.
+\end{itemize}
