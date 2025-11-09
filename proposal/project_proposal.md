@@ -44,7 +44,7 @@ Specifically, we aim to:
 1. Compute **basic graph properties** (size, degree distribution, connectivity, density)  
 2. Calculate **centrality measures** (degree, closeness, betweenness)  
 3. Analyse **clustering coefficient** and **community structure**  
-4. Optionally, explore **motifs** and **biological relevance** of network patterns  
+4. Optionally, explore **motifs** and **biological relevance** of network patterns ??
 
 ### 4.2 Methodology
 The project will use **Python** and the **NetworkX** package to:
