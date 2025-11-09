@@ -25,9 +25,6 @@ It represents a **biological neural connectivity network** (*C. elegans*) where:
 - **Average Degree:** 48  
 - **Size:** ~512 KB  
 
-**Citation:**  
-Rossi, R. A., & Ahmed, N. K. (2015). *The Network Data Repository with Interactive Graph Analytics and Visualization.* AAAI.
-
 ---
 
 ## 4. Objectives and Methodology
