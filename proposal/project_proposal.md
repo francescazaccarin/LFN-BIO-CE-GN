@@ -57,6 +57,13 @@ All analyses and experiments will be performed on local machines using Jupyter N
 
 ## 6. References
 
+1. Ryan A. Rossi and Nesreen K. Ahmed (2015). *The Network Data Repository with Interactive Graph Analytics and Visualization.* AAAI. [https://networkrepository.com](https://networkrepository.com)
+2. Newman, M. E. J. (2003). *The Structure and Function of Complex Networks.* *SIAM Review*, 45(2), 167–256.
+3. Brandes, U. (2001). *A Faster Algorithm for Betweenness Centrality.* *Journal of Mathematical Sociology*, 25(2), 163–177.
+4. Watts, D. J., & Strogatz, S. H. (1998). *Collective Dynamics of ‘Small-World’ Networks.* *Nature*, 393(6684), 440–442.
+
+---
+
 # Appendix: Team Contributions and AI Tools
 
 ## Contributions
