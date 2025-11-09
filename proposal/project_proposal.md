@@ -17,6 +17,7 @@ If we represent neurons as nodes and synapses as edges, graph theory can be us
 
 We aim to apply results from network science in description of its main structural properties—connectivity, centrality and clustering—and in uncovering the patterns that could be found available in other real world networked systems.
 Reach The goals of the *How to Learn from Networks* class are also embraced by this project, where graph based models can aid our understanding of complex systems.
+
 ---
 
 ## 3. Dataset
