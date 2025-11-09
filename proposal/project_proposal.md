@@ -55,3 +55,14 @@ All analyses and experiments will be performed on local machines using Jupyter N
 ---
 
 ## 6. References
+
+# Appendix: Team Contributions and AI Tools
+
+## Contributions
+| Member | Contribution | Fraction |
+|---------|---------------|-----------|
+| Francesca Zaccarin | Repository setup, dataset integration, README draft
+| ZhangShen | Motivation writing, proposal structure, references and appendix
+
+## Use of AI Tools
+We used ChatGPT to refine the writing style and structure of the proposal document.
