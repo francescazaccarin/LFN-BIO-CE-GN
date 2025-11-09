@@ -9,6 +9,14 @@ Exploring Biological Networks: Centrality and Clustering Analysis on the BIO-CE-
 
 ## 2. Motivation
 
+Biological neural systems are amazing and complex networks that govern how living organisms deal with information.
+Learning about their structure may help scientists figure out how links among neurons influence communication and the way they work.
+
+As a case study, we analyze the *BIO-CE-GN* dataset that describes the entire neural network of *C. elegans*.
+If we represent neurons as nodes and synapses as edges, graph theory can be used to investigate how the network is structured and how information potentially moves through it.
+
+We aim to apply results from network science in description of its main structural properties—connectivity, centrality and clustering—and in uncovering the patterns that could be found available in other real world networked systems.
+Reach The goals of the *How to Learn from Networks* class are also embraced by this project, where graph based models can aid our understanding of complex systems.
 ---
 
 ## 3. Dataset
