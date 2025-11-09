@@ -59,6 +59,17 @@ All analyses and experiments will be performed on local machines using Jupyter N
 
 ## 5. Intended Experiments
 
+
+In this work we intend to use the BIO-CE-GN dataset to analyze its main network features.
+
+1. **Graph loading and preprocessing** — Make a weighted, bidirectional graph out of the dataset, with its nodes being neurons and edges synapses.  
+2. **Computation of basic properties** — Measure some standard statistics like how many nodes and edges there are, the distribution of the degrees, what the connectivity might be and how dense it looks.  
+3. **Centrality analysis** — In order to find out which neurons in the network are most important to others, calculate their degree and closeness of betweenness distribution.  
+4. **Clustering and community detection** — Go through painting a portrait of the neurons: Are they lumping together in clumps or spreading out like little worlds unto themselves?  
+5. **Visualization and interpretation** — Create clear visual figures of the patterns found in the network and short tables showing them to be biological. 
+
+All the experiments are to be done using **Python**, **NetworkX**, and **Jupyter Notebook** on our own local machines.
+
 ---
 
 ## 6. References
