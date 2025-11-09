@@ -4,9 +4,6 @@
 
 Exploring Biological Networks: Centrality and Clustering Analysis on the BIO-CE-GN Dataset
 
-This project was developed as part of the course *“Learning from Networks”* for the Master’s Degree in Computer Engineering.  
-The goal of this project is to analyse a biological network and perform various graph-theoretic analyses to understand its structural and functional properties.
-
 ---
 
 
