@@ -59,7 +59,6 @@ All analyses and experiments will be performed on local machines using Jupyter N
 
 ## 5. Intended Experiments
 
-
 In this work we intend to use the BIO-CE-GN dataset to analyze its main network features.
 
 1. **Graph loading and preprocessing** — Make a weighted, bidirectional graph out of the dataset, with its nodes being neurons and edges synapses.  
@@ -83,11 +82,10 @@ All the experiments are to be done using **Python**, **NetworkX**, and **Jupyter
 
 # Appendix: Team Contributions and AI Tools
 
-## Contributions
 | Member | Contribution | Fraction |
 |---------|---------------|-----------|
-| Francesca Zaccarin | Repository setup, dataset integration, README draft
-| ZhangShen | Motivation writing, proposal structure, references and appendix
+| Francesca Zaccarin | Repository setup, dataset integration, README draft | 50% |
+| Zhang Shen | Motivation writing, proposal structure, references and appendix | 50% |
 
 ## Use of AI Tools
 We used ChatGPT to refine the writing style and structure of the proposal document.
