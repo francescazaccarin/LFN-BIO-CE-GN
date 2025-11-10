@@ -70,10 +70,14 @@ We computed several network metrics to analyse different aspects of the network:
 
 \subsection{Intended Experiments}
 
-We plan to:
+In the following experiments, we will examine the BIO-CE-GN dataset to describe its main topological and biological characteristics.
+
 \begin{itemize}
-    \item Analyse correlations between different centrality measures;
-    \item Visualise the network to highlight highly central genes;
-    \item Investigate whether topologically clustered genes correspond to known biological pathways;
-    \item Explore scalability of algorithms when applied to large-scale biological datasets.
+    \item \textbf{Graph preprocessing} — Encode the dataset as a directed, weighted graph, with neurons as nodes and synapses as links.  
+    \item \textbf{Network properties} — Compute basic network metrics such as node and edge counts, degree distribution, and connectivity.  
+    \item \textbf{Centrality and correlation} — Calculate degree, closeness, and betweenness centralities, and analyze their correlations to identify neurons or genes with high centrality.  
+    \item \textbf{Clustering relevance} — Explore communities and assess whether clustered nodes are involved in known biological pathways.  
+    \item \textbf{Visualization and scalability} — Visualize main structures and test algorithm performance on larger datasets.
 \end{itemize}
+
+Analysis for all the above steps will be performed using \textbf{Python}, \textbf{NetworkX}, and \textbf{Jupyter Notebook} on local machines.
