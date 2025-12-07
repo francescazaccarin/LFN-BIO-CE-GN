@@ -3,10 +3,8 @@ import pandas as pd
 from pathlib import Path
 
 
-# === CONFIG ============================================================== #
+# === CONFIG ============================================================== 
 
-# Cambia il nome del file qui sotto con quello reale del tuo dataset
-# ad esempio "bio-ce-gn.edges" o come l'avete salvato in data/
 DATA_PATH = Path("data/bio-CE-GN.edges")
 
 # Se volete considerare il grafo diretto metti True
