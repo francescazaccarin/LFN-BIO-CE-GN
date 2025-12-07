@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install networkx pandas
+          pip install networkx pandas scipy
 
       - name: Run analysis
         run: |
