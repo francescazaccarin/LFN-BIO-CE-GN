@@ -1,5 +1,6 @@
 import networkx as nx
 import pandas as pd
+import matplotlib.pyplot as plt
 from pathlib import Path
 
 
@@ -115,7 +116,25 @@ def compute_correlation(df: pd.DataFrame) -> pd.DataFrame:
     corr = df.corr(method="pearson")
     return corr
 
+def plot_distributions(centralities: pd.DataFrame):
+    """
+    Plot simple histograms for each centrality measure and save them as PNG.
+    """
+    plots_dir = Path("results") / "plots"
+    plots_dir.mkdir(exist_ok=True, parents=True)
 
+    for col in centralities.columns:
+        values = centralities[col].values
+
+        plt.figure()
+        plt.hist(values, bins=50)
+        plt.xlabel(col)
+        plt.ylabel("Frequency")
+        plt.title(f"Distribution of {col} centrality")
+        plt.tight_layout()
+        plt.savefig(plots_dir / f"{col}_distribution.png")
+        plt.close()
+        
 # === SAVING RESULTS ===================================================== #
 
 def save_results(stats: dict, centralities: pd.DataFrame, corr: pd.DataFrame):
@@ -169,6 +188,9 @@ def main():
 
     print("Computing correlation matrix...")
     corr = compute_correlation(centralities)
+    
+    print("Plotting centrality distributions...")
+    plot_distributions(centralities)
 
     print("Saving results...")
     save_results(stats, centralities, corr)
