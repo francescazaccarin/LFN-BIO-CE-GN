@@ -75,8 +75,6 @@ We computed several network metrics to analyse different aspects of the network:
 \subsection{Intended Experiments}
 
 In the following experiments, we will examine the BIO-CE-GN dataset to describe its main topological and biological characteristics.
-We exported the top-ranked nodes for each centrality measure and generated summary plots.  
-These results will be used in the next stage of the project for biological interpretation and pathway validation.
 
 \begin{itemize}
     \item \textbf{Graph preprocessing} — Represent the dataset as an undirected gene–gene interaction network after removing self-loops and duplicated edges.
@@ -85,7 +83,9 @@ These results will be used in the next stage of the project for biological inter
      with an average degree of 48.36 and a density of 0.0218. 
      We also computed centrality scores for all nodes and generated the Pearson 
      correlation matrix between degree, betweenness and PageRank.
-    \item \textbf{Centrality and correlation} — Calculate degree, closeness, and betweenness centralities, and analyze their correlations to identify neurons or genes with high centrality.  
+    \item \textbf{Centrality and correlation} — Calculate degree, closeness, and betweenness centralities, and analyze their correlations to identify genes with high centrality.  
+    We exported the top-ranked nodes for each centrality measure and generated summary plots.  
+    These results will be used in the next stage of the project for biological interpretation and pathway validation.
     \item \textbf{Clustering relevance} — Explore communities and assess whether clustered nodes are involved in known biological pathways.  
     \item \textbf{Visualization and scalability} — Visualize main structures and test algorithm performance on larger datasets.
 \end{itemize}
