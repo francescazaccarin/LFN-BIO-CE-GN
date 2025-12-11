@@ -27,7 +27,8 @@ The \textbf{BIO-CE-GN dataset} consists of experimentally derived genetic intera
 Each node represents a gene, and each edge denotes an experimentally verified genetic interaction. 
 The dataset provides both directional and weighted information, indicating the type and strength of interactions.  
 
-The network contains approximately \textit{N} nodes and \textit{M} edges (exact values to be confirmed), forming a dense and biologically meaningful structure. 
+The network contains 2,220 nodes and 53,683 edges, with an average degree of 48.36 and a density of 0.0218.  
+The graph is composed of 3 connected components.
 This dataset enables the exploration of complex topological properties that may correspond to real biological pathways and regulatory mechanisms.
 
 \section{Methodology}
@@ -46,6 +47,9 @@ This involved:
     \item Handling missing or inconsistent identifiers;
     \item Converting the data into an \textbf{edge list} format suitable for the \texttt{networkx} Python library.
 \end{itemize}
+
+In addition, we removed self-loops and converted the dataset into a simple undirected graph in order to compute centrality measures consistently.  
+All preprocessing steps were performed in Python using the NetworkX library.
 
 \subsection{Graph Representation}
 
@@ -71,10 +75,16 @@ We computed several network metrics to analyse different aspects of the network:
 \subsection{Intended Experiments}
 
 In the following experiments, we will examine the BIO-CE-GN dataset to describe its main topological and biological characteristics.
+We exported the top-ranked nodes for each centrality measure and generated summary plots.  
+These results will be used in the next stage of the project for biological interpretation and pathway validation.
 
 \begin{itemize}
-    \item \textbf{Graph preprocessing} — Encode the dataset as a directed, weighted graph, with neurons as nodes and synapses as links.  
-    \item \textbf{Network properties} — Compute basic network metrics such as node and edge counts, degree distribution, and connectivity.  
+    \item \textbf{Graph preprocessing} — Represent the dataset as an undirected gene–gene interaction network after removing self-loops and duplicated edges.
+    \item \textbf{Network properties} — Compute basic network metrics such as node and edge counts, degree distribution, and connectivity. \\
+     After preprocessing, the network contains 2,220 nodes and 53,683 edges, 
+     with an average degree of 48.36 and a density of 0.0218. 
+     We also computed centrality scores for all nodes and generated the Pearson 
+     correlation matrix between degree, betweenness and PageRank.
     \item \textbf{Centrality and correlation} — Calculate degree, closeness, and betweenness centralities, and analyze their correlations to identify neurons or genes with high centrality.  
     \item \textbf{Clustering relevance} — Explore communities and assess whether clustered nodes are involved in known biological pathways.  
     \item \textbf{Visualization and scalability} — Visualize main structures and test algorithm performance on larger datasets.
