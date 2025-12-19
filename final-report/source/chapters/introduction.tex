@@ -7,14 +7,19 @@ The original proposal sought to explore the network using graph-theoretical tech
 
 The project uses network topology to elucidate underlying regulators and organisational relationships in the biological system by modelling genes as nodes and interactions as edges.
 
-\subsection{Dataset Overview}
-The \textbf{BIO-CE-GN dataset} consists of experimentally derived genetic interactions among genes of \textit{Caenorhabditis elegans}, a well-studied model organism. 
-Each node represents a gene, and each edge denotes an experimentally verified genetic interaction. 
-The dataset provides both directional and weighted information, indicating the type and strength of interactions.  
+\section{Progress Since the Proposal}
 
-The network contains 2,220 nodes and 53,683 edges, with an average degree of 48.36 and a density of 0.0218.  
-The graph is composed of 3 connected components.
-This dataset enables the exploration of complex topological properties that may correspond to real biological pathways and regulatory mechanisms.
+\subsection{Dataset Processing and Network Construction}
+During the development phase, the \textbf{BIO-CE-GN dataset} has been processed and adapted as a novel gene interaction network for graph analysis.
+
+The self-loops were removed from the graph and the data are represented as a simple undirected graph to ensure consistency in centrality computation.The network that comes out the product of these steps is composed of 2,220 nodes and 53,683 edges, with an average degree of 48.36 and a density of 0.0218.The graph consists of three connected components.
+
+\subsection{Centrality Analysis and Preliminary Results}
+After construction of the network, various node-level centrality measures including degree centrality, betweenness centrality, PageRank were computed.All node centrality values were calculated and exported for further evaluation.
+
+Further, Pearson correlation matrix between the centrality measures was calculated and displayed by using a correlation heatmap.
+
+The preliminary results suggest a strong relationship between degree centrality with PageRank, and betweenness centrality shows relatively low correlation with the other measures, which indicates that it captures complementary structural information.
 
 \section{Methodology}
 
