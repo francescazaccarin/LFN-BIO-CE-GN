@@ -29,6 +29,15 @@ As discussed in class, degree centrality reflects local connectivity by measurin
 
 The correlation analysis further clarifies the relationship between these measures. The strong correlation observed between degree centrality and PageRank suggests that genes with many interactions also tend to be globally influential within the network. In contrast, betweenness centrality exhibits lower correlation with the other measures, indicating that it captures complementary structural information by identifying genes that play a mediating or connector role. These differences motivate a combined use of centrality measures to characterise gene importance from multiple structural perspectives.
 
+\section{Changes from the Original Proposal}
+
+Some changes have been reported in the projects from planning. Although the main concerns of such changes are the options chosen to model the data, the nature of the midterm analysis, and the scheduling of the remaining tasks.
+
+First, as shown in the proposal, the BIO-CE-GN dataset was already described at a high level, but the dataset is fully processed and shown as a graph-based gene interaction network. Specifically, we represented the network as an undirected graph with no self-loops. This model was chosen as it guarantees reproducibility and comparability among the centrality measures.
+
+Second, the midterm phase is now focused on conducting a detailed structural analysis at the node level. Furthermore, apart from calculating degree centrality, betweenness centrality and PageRank (as initially planned to) it is also found out that there can be correlation analysis done and visualized between the measures. This step was not mentioned in the original proposal and is another insight into whether various notions of node importance are necessarily conjoined.
+
+Finally, elements of the proposal such as detailed biological interpretation of central genes and community detection analyses were not original and are scheduled later in the project. This enables the present work to consolidate the network-level results and continue on to biological validation and at the further functional interpretation level.
 
 \section{Methodology}
 
