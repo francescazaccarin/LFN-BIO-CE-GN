@@ -39,63 +39,10 @@ Second, the midterm phase is now focused on conducting a detailed structural ana
 
 Finally, elements of the proposal such as detailed biological interpretation of central genes and community detection analyses were not original and are scheduled later in the project. This enables the present work to consolidate the network-level results and continue on to biological validation and at the further functional interpretation level.
 
-\section{Methodology}
+\section{Next Steps}
 
-\subsection{Problem Definition}
+The second phase of the project will concentrate on generalizing the network-level results to biological understanding. Especially the most central genes determined by the centrality analysis will be investigated to understand their biological importance and functions within the genetic interaction network.
 
-The primary goal is to characterise the connectivity and community structure of the gene interaction network derived from \textit{C. elegans}. 
-We aim to identify critical genes (hubs or regulators), analyse modularity, and study how topological patterns relate to biological functionality.
+Community detection and clustering analyses will be utilized to explore if densely associated groups of genes map onto known biological pathways or functional modules. This task was described in the original experimental plan and will be addressed in the subsequent stage of the project.
 
-\subsection{Data Preprocessing}
-
-Before performing any analysis, we cleaned and formatted the dataset to ensure compatibility with network analysis libraries. 
-This involved:
-\begin{itemize}
-    \item Removing self-loops and duplicated edges;
-    \item Handling missing or inconsistent identifiers;
-    \item Converting the data into an \textbf{edge list} format suitable for the \texttt{networkx} Python library.
-\end{itemize}
-
-In addition, we removed self-loops and converted the dataset into a simple undirected graph in order to compute centrality measures consistently.  
-All preprocessing steps were performed in Python using the NetworkX library.
-
-\subsection{Graph Representation}
-
-The dataset was represented as an undirected graph \( G = (V, E) \), where:
-\begin{itemize}
-    \item \( V \) represents the set of genes;
-    \item \( E \) represents the genetic interactions between them.
-\end{itemize}
-
-The graph was constructed using the \texttt{networkx} library, which provides efficient tools for computing network metrics such as centrality, clustering coefficients, and community structures.
-
-\subsection{Algorithms Used}
-
-We computed several network metrics to analyse different aspects of the network:
-\begin{itemize}
-    \item \textbf{Degree Centrality:} Measures the number of connections each gene has, identifying highly connected hub genes.
-    \item \textbf{Betweenness Centrality:} Quantifies how often a gene lies on the shortest paths between other genes, identifying key regulatory genes.
-    \item \textbf{PageRank:} Evaluates the relative importance of genes based on their connectivity to other important genes.
-    \item \textbf{Clustering Coefficient:} Determines the tendency of genes to form tightly connected groups, representing potential biological modules.
-    \item \textbf{Average Neighbor Degree:} Indicates how the connectivity of a gene correlates with that of its neighbours.
-\end{itemize}
-
-\subsection{Intended Experiments}
-
-In the following experiments, we will examine the BIO-CE-GN dataset to describe its main topological and biological characteristics.
-
-\begin{itemize}
-    \item \textbf{Graph preprocessing} — Represent the dataset as an undirected gene–gene interaction network after removing self-loops and duplicated edges.
-    \item \textbf{Network properties} — Compute basic network metrics such as node and edge counts, degree distribution, and connectivity. \\
-     After preprocessing, the network contains 2,220 nodes and 53,683 edges, 
-     with an average degree of 48.36 and a density of 0.0218. 
-     We also computed centrality scores for all nodes and generated the Pearson 
-     correlation matrix between degree, betweenness and PageRank.
-    \item \textbf{Centrality and correlation} — Calculate degree, closeness, and betweenness centralities, and analyze their correlations to identify genes with high centrality.  
-    We exported the top-ranked nodes for each centrality measure and generated summary plots.  
-    These results will be used in the next stage of the project for biological interpretation and pathway validation.
-    \item \textbf{Clustering relevance} — Explore communities and assess whether clustered nodes are involved in known biological pathways.  
-    \item \textbf{Visualization and scalability} — Visualize main structures and test algorithm performance on larger datasets.
-\end{itemize}
-
-Analysis for all the above steps will be performed using \textbf{Python}, \textbf{NetworkX}, and \textbf{Jupyter Notebook} on local machines.
+These findings will serve as a basis for additional validation and refinement of the analysis so that in the final report, the network architecture and its biological implications can be understood more completely.
