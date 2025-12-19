@@ -1,26 +1,11 @@
-\section{Introduction}
+\section{Midterm-report}
 
-\subsection{Motivation}
-How are genes interconnected within a biological system? 
-Which genes play the most central roles in maintaining the organisation and functionality of the network? 
-And do these interactions form cohesive functional modules or rather a loosely connected structure?
+\subsection{Project Recap}
+This project investigates the architecture of a gene interaction network obtained from the BIO-CE-GN dataset for genetic interactions in Caenorhabditis elegans.
 
-Understanding these questions is fundamental in biology, as the structure of gene and protein interaction networks often reflects the organisation of the underlying cellular processes.
-By representing biological systems as graphs — where nodes correspond to genes and edges represent genetic interactions — we can apply concepts from graph theory to uncover hidden patterns of regulation and connectivity.
+The original proposal sought to explore the network using graph-theoretical techniques to extract core genes using different centrality methods and to explore potential community structures.
 
-In particular, analysing centrality measures allows us to identify hub genes that may act as key regulators, while studying clustering and community structures reveals how these genes group into functional modules. 
-
-The BIO-CE-GN dataset, representing genetic interactions in \textit{Caenorhabditis elegans}, provides an ideal test case for such an analysis. 
-By combining centrality and clustering analyses, we aim to characterise the network’s topology and gain insight into how complex biological behaviour can emerge from simple patterns of connection.
-
-\subsection{Objectives}
-The main objective of this project is to analyse the structure of the BIO-CE-GN gene interaction network by applying several graph-theoretical measures. 
-Specifically, we aim to:
-\begin{itemize}
-    \item Identify central genes using centrality metrics such as \textbf{degree}, \textbf{betweenness}, and \textbf{PageRank};
-    \item Evaluate the \textbf{clustering} and \textbf{community structure} to detect functional gene modules;
-    \item Compare different centrality measures to assess their biological interpretability and computational scalability.
-\end{itemize}
+The project uses network topology to elucidate underlying regulators and organisational relationships in the biological system by modelling genes as nodes and interactions as edges.
 
 \subsection{Dataset Overview}
 The \textbf{BIO-CE-GN dataset} consists of experimentally derived genetic interactions among genes of \textit{Caenorhabditis elegans}, a well-studied model organism. 
