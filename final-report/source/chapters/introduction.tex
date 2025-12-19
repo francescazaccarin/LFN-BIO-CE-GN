@@ -21,6 +21,15 @@ Further, Pearson correlation matrix between the centrality measures was calculat
 
 The preliminary results suggest a strong relationship between degree centrality with PageRank, and betweenness centrality shows relatively low correlation with the other measures, which indicates that it captures complementary structural information.
 
+\section{Interpretation of Current Results}
+
+The node-level analysis based on different centrality measures provides complementary insights into the structural roles of genes in the BIO-CE-GN interaction network. In particular, degree centrality, betweenness centrality, and PageRank capture different notions of node importance within the network.
+
+As discussed in class, degree centrality reflects local connectivity by measuring how many direct interactions a gene has, while betweenness centrality highlights genes that act as bridges between different parts of the network. PageRank, instead, captures a notion of global importance by accounting not only for the number of connections, but also for the importance of neighbouring nodes from a random-walk perspective.
+
+The correlation analysis further clarifies the relationship between these measures. The strong correlation observed between degree centrality and PageRank suggests that genes with many interactions also tend to be globally influential within the network. In contrast, betweenness centrality exhibits lower correlation with the other measures, indicating that it captures complementary structural information by identifying genes that play a mediating or connector role. These differences motivate a combined use of centrality measures to characterise gene importance from multiple structural perspectives.
+
+
 \section{Methodology}
 
 \subsection{Problem Definition}
