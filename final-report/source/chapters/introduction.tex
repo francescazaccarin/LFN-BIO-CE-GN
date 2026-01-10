@@ -39,6 +39,16 @@ Second, the midterm phase is now focused on conducting a detailed structural ana
 
 Finally, elements of the proposal such as detailed biological interpretation of central genes and community detection analyses were not original and are scheduled later in the project. This enables the present work to consolidate the network-level results and continue on to biological validation and at the further functional interpretation level.
 
+\section{Community Detection and Assessment of Functional Relevance}
+
+In addition to node-level centrality measures, the project also considers the mesoscopic organisation of the network through community detection. Communities are defined as groups of nodes that are more densely connected to each other than to the rest of the graph, and they provide insight into higher-level structural patterns that cannot be captured by individual node metrics alone.
+
+Following the project guidelines, the analysis is restricted to network-based methods introduced during the course. In this context, community detection is performed using modularity-based approaches, which aim to identify partitions of the network that maximise intra-community connectivity while minimising inter-community links. These methods are commonly adopted in network science and are consistent with the techniques discussed in class.
+
+The detected communities are interpreted as structural modules emerging from the topology of the gene interaction network. In biological networks, such modules are often considered candidate functional units, as genes that are densely interconnected may participate in related biological processes or pathways.
+
+The correspondence between communities and known biological pathways is assessed at a qualitative and exploratory level. Rather than performing external biological enrichment analyses, which are beyond the scope of this course, the evaluation focuses on network-based properties such as the internal connectivity of communities and the presence of highly central genes within clusters. This approach provides an initial indication of the potential functional relevance of the detected communities while remaining fully consistent with the methodological constraints of the course.
+
 \section{Next Steps}
 
 The second phase of the project will concentrate on generalizing the network-level results to biological understanding. Especially the most central genes determined by the centrality analysis will be investigated to understand their biological importance and functions within the genetic interaction network.
