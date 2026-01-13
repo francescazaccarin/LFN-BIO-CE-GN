@@ -6,12 +6,38 @@ In this project, we investigate the BIO-CE-GN dataset of genetic interactions in
 
 Beyond node-level properties, we also discuss community structure as a qualitative framework to interpret densely connected groups of genes as candidate functional modules. Overall, the goal is to provide an interpretable structural characterisation of the BIO-CE-GN interaction network using techniques introduced during the course, and to outline how these network-level findings can motivate biological follow-up analyses.
 
+\section{Dataset and Network Construction}
+
+The analysis is based on the BIO-CE-GN dataset of genetic interactions in \textit{Caenorhabditis elegans}. The data was visualized and shown in the form of a network of genes where nodes correspond to genes and edges correspond to interactions between genes. In this graph representation, it makes it easy to use the usual network analysis methods to characterize the structural behaviour of the interaction system.
+
+Self-loops were dropped before preprocessing to avoid artificially inflating node centrality scores. The network was modelled as a simple undirected graph, which guarantees a uniform treatment of the centrality measures and supports comparison across metrics. This modeling decision adheres to the project instructions and is consistent with the network representations introduced in class.
+
+The resulting network has 2,220 nodes and 53,683 edges (average degree = 48.36; density = 0.0218). The graph is comprised of three connected components which suggests that most genes are linked together well, but few nodes make up a small set of isolated subgraphs. The number of units in the network also influences its characteristics. A connectivity pattern indicates a predominantly integrated interaction network.
+
+These fundamental network statistics, thus, illustrate the interaction structure globally, which will serve as the foundation for the centrality and correlation analysis discussed later in the page.
+
+\section{Results}
+
+\subsection{Centrality Analysis}
+
+In biological interaction networks, various structural roles could be associated with differing biological hypotheses. Hub-like (high degree or PageRank) genes may be representative of those broadly interacting genes, and bridge-like (high betweenness) genes may indicate those genes that organize the interactions across modules. Hence, joint interpretation of centrality scores is more informative than considering a single measure alone.
+
+To characterize the structural roles of individual genes in the BIO-CE-GN interaction network, we calculated three node-level centrality measures: degree centrality, betweenness centrality, and PageRank. There is a parallel set of nodes with values in different axes of centrality in the topology as reported in the above metrics.
+
+Degree centrality indicates local connectivity by counting the number of direct interactions, or “hubs,” of a gene in the network. Genes that are central in a big way can be regarded as hubs and potentially involved in a wide variety of genetic interactions.
+
+Betweenness centrality represents the fraction of shortest pathways in the network and shows genes that serve as a bridge between nodes. These nodes may also act as intermediaries that connect areas of interaction structure which are not very connected and help to facilitate connectivity in the network.
+
+PageRank adds some global weight to the concept of importance by considering not only the number of connections between a gene but also the relevance of its neighbouring genes with a random walk. Consequently, genes with high PageRank are not necessarily the most important but rather the embedded genes in influential layers of the network.
+
+All centrality scores were computed on the preprocessed undirected simple graph from the BIO-CE-GN edge list (self-loops removed). Degree centrality measured local connectivity, PageRank gave a global ranking depending on neighbourhood influence, and betweenness centrality reflected potential connector nodes that connect different areas of the network. Employing multiple measures lessens the bias of a single concept of importance, while giving a more reliable structural typology of candidate genes.
+
+
+\subsection{Correlation between Centrality Measures}
+
+
+
 \section{Progress Since the Proposal}
-
-\subsection{Dataset Processing and Network Construction}
-During the development phase, the \textbf{BIO-CE-GN dataset} has been processed and adapted as a novel gene interaction network for graph analysis.
-
-The self-loops were removed from the graph and the data are represented as a simple undirected graph to ensure consistency in centrality computation.The network that comes out the product of these steps is composed of 2,220 nodes and 53,683 edges, with an average degree of 48.36 and a density of 0.0218.The graph consists of three connected components.
 
 \subsection{Centrality Analysis and Preliminary Results}
 After construction of the network, various node-level centrality measures including degree centrality, betweenness centrality, PageRank were computed.All node centrality values were calculated and exported for further evaluation.
