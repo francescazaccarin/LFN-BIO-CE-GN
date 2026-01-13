@@ -1,11 +1,10 @@
-\section{Midterm-report}
+\section{Introduction}
 
-\subsection{Project Recap}
-This project investigates the architecture of a gene interaction network obtained from the BIO-CE-GN dataset for genetic interactions in Caenorhabditis elegans.
+Gene interaction networks provide a graph-based representation of genetic relationships, where genes are modelled as nodes and interactions as edges. Analysing such networks with graph-theoretic tools can reveal structural patterns that are informative about candidate regulators, hub genes, and higher-level organisational structure.
 
-The original proposal sought to explore the network using graph-theoretical techniques to extract core genes using different centrality methods and to explore potential community structures.
+In this project, we investigate the BIO-CE-GN dataset of genetic interactions in \textit{Caenorhabditis elegans} by constructing a gene interaction network and studying it through node-level centrality measures and correlation analysis. Specifically, we compute degree centrality, betweenness centrality, and PageRank to capture complementary notions of node importance, and we examine the correlation between these measures to understand how different centrality-based rankings agree or differ.
 
-The project uses network topology to elucidate underlying regulators and organisational relationships in the biological system by modelling genes as nodes and interactions as edges.
+Beyond node-level properties, we also discuss community structure as a qualitative framework to interpret densely connected groups of genes as candidate functional modules. Overall, the goal is to provide an interpretable structural characterisation of the BIO-CE-GN interaction network using techniques introduced during the course, and to outline how these network-level findings can motivate biological follow-up analyses.
 
 \section{Progress Since the Proposal}
 
